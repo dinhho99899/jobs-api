@@ -20,8 +20,8 @@ const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 // routes
-app.use('/', (req, res) => {
-  res.send('jobs-api')
+app.get('/', (req, res) => {
+  res.send('jobs api')
 })
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/jobs', authenticationUser, jobsRouter)
